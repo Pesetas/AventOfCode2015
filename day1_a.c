@@ -1,22 +1,15 @@
-#include <stdio.h>
-#include <unistd.h>
-#include <stdlib.h>
-
-int main(void)
+int day1_a(char *str)
 {
-    char    *cadena = "()((((";
-    int     sum = 0;
-
-    while (*cadena != '\0')
+    int     sum; 
+    
+    sum = 0;
+    while (*str != '\0')
     {
-        if (*cadena == '(')
+        if (*str == '(')
             sum++;
         else
             sum--;
-        cadena++;
+        str++;
     }
-
-    printf("%d", sum);
-
-    return 0;
+    return (sum);
 }
