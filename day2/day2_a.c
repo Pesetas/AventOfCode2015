@@ -1,4 +1,4 @@
-#include "advent.h"
+#include "../inc/advent.h"
 
 static void get_dimensions_valours(char *str, int *x, int *y, int *z)
 {
@@ -57,4 +57,10 @@ int day2_a()
     }
     fclose(file);
     return (sum);
+}
+
+int main(void)
+{
+    printf("%d", day2_a());
+    return 0;
 }
