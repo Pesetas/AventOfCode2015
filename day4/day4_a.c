@@ -12,7 +12,7 @@ static int looking_for_5zeros(char *str)
 		if(*str != '0')
 			return (0);
 		num_zeros++;
-		if (num_zeros == 5)
+		if (num_zeros == 6)	// Modify this
 		{
 			return (1);
 		}
@@ -33,12 +33,18 @@ static void	adding_digits(char *str)
 	num++;
 }
 
-int main()	{
+int main(int argc, char **argv)	{
 	char	*text = malloc(sizeof(char) * 64);
 	char	md5_result[EVP_MAX_MD_SIZE * 2 + 1];  // Máximo tamaño del digest + null terminator
 	char	*cpy = malloc(sizeof(char) * 64);
 
-	ft_strlcpy(text, "bgvyzdsv", 64);
+	if (!argv[1])
+	{
+		fprintf(stderr, "You must input a text string as an argument.");
+		return (1);
+	}
+	(void) argc;
+	ft_strlcpy(text, argv[1], 64);
 	calculate_md5(text, md5_result);
 	while (looking_for_5zeros(md5_result) != 1)
 	{
