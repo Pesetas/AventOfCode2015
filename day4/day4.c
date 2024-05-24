@@ -12,7 +12,7 @@ static int looking_for_5zeros(char *str)
 		if(*str != '0')
 			return (0);
 		num_zeros++;
-		if (num_zeros == 6)	// Modify this
+		if (num_zeros == 5)	// Modify this
 		{
 			return (1);
 		}
@@ -53,6 +53,8 @@ int main(int argc, char **argv)	{
 		calculate_md5(cpy, md5_result);
 	}
 	fprintf(stderr, "MD5 hash de '%s' es: %s\n", cpy, md5_result);
+	free(text);
+	free(cpy);
 	return 0;
 }
  

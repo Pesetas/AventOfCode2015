@@ -49,5 +49,6 @@ int main(void)
     fclose(file);
     matrix = create_matrix(MATRIX_SIZE);
     printf("houses = %d\n", calculate_houses(matrix, buffer));
+    free_matrix(matrix, MATRIX_SIZE);
     return (0);
 }
