@@ -4,6 +4,8 @@ Advent of Code is an Advent calendar of small programming puzzles for a variety 
 
 https://adventofcode.com/2015
 
+The exercises will be done in C.
+
 Completed:
 - Day 1
 - Day 2
