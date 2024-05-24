@@ -2,7 +2,7 @@
 #include <openssl/evp.h>
 
 
-static int looking_for_5zeros(char *str)
+static int looking_for_Xzeros(char *str)
 {
 	int num_zeros;
 
@@ -12,7 +12,7 @@ static int looking_for_5zeros(char *str)
 		if(*str != '0')
 			return (0);
 		num_zeros++;
-		if (num_zeros == 5)	// Modify this
+		if (num_zeros == 5)	// Modify this to change number of zeros
 		{
 			return (1);
 		}
