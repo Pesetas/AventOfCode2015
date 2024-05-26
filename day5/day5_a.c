@@ -1,6 +1,6 @@
 #include "../inc/advent.h"
 
-static int	contains_string(char *str)
+static int	contains_pair(char *str)
 {
 	size_t	size;
 
@@ -113,7 +113,7 @@ int main(int argc, char **argv)
 	sum = 0;
 	while(fgets(buffer, MAX_LINE_LENGTH, file) != NULL)
 	{
-		sum += day5(contains_string(buffer), twice(buffer), vocals(buffer));
+		sum += day5(contains_pair(buffer), twice(buffer), vocals(buffer));
 	}
 	fclose(file);
 	printf("%d", sum);
