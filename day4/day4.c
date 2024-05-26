@@ -46,7 +46,7 @@ int main(int argc, char **argv)	{
 	(void) argc;
 	ft_strlcpy(text, argv[1], 64);
 	calculate_md5(text, md5_result);
-	while (looking_for_5zeros(md5_result) != 1)
+	while (looking_for_Xzeros(md5_result) != 1)
 	{
 		ft_strlcpy(cpy, text, strlen(text) + 1);
 		adding_digits(cpy);

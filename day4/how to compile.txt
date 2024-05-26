@@ -1,3 +1,0 @@
-gcc -Wall -Wextra -Werror ./day4/day4_a.c ./utils/hash.c ./utils/strlcpy.c ./utils/itoa.c -lssl -lcrypto
-
-./a.out abcdef
