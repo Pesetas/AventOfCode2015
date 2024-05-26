@@ -6,15 +6,7 @@
 # include <fcntl.h>
 # include <string.h>
 
-# define MAX_LINE_LENGTH 16384
-
-int day1_a(char *str);
-int day1_b(char *str);
-int day2_a();
-int day2_b();
-
-/* -- UTILS -- */
-
+# define MAX_LINE_LENGTH 2048
 # define MATRIX_SIZE 10000
 
 int     **create_matrix(size_t size);
