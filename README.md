@@ -11,5 +11,6 @@ Completed:
 - Day 2
 - Day 3
 - Day 4
+- Day 5 - 1st part
 
 ![completed tree](img/solved_tree.png)
