@@ -12,4 +12,4 @@ Completed:
 - Day 3
 - Day 4
 
-![completed tree][img/solved_tree.png]
+![completed tree](img/solved_tree.png)
