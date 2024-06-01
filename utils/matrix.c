@@ -20,7 +20,6 @@
             return (NULL);
         }
     }
-    m[MATRIX_SIZE/2][MATRIX_SIZE/2] = 1;
     return (m);
 }
 

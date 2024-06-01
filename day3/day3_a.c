@@ -32,22 +32,29 @@ static int  calculate_houses(int **m, char *str)
     return (houses);
 }
 
-int main(void)
+int main(int argc, char **argv)
 {
     int    **matrix;
     FILE    *file;
     char    buffer[MAX_LINE_LENGTH];
-    
-    file = fopen("./day3/3_a.txt", "r");
+
+    (void)argc;
+    if (!argv[1])
+	{
+		fprintf(stderr, "You must input a file as an argument.");
+		return (1);
+	}
+    file = fopen(argv[1], "r");
     if (file == NULL)
     {
-        printf("Error opening text file");
+        fprintf(stderr, "Error opening text file");
         exit(1);
     }
     if (!fgets(buffer, MAX_LINE_LENGTH, file))
         return (1);
     fclose(file);
     matrix = create_matrix(MATRIX_SIZE);
+    matrix[MATRIX_SIZE/2][MATRIX_SIZE/2] = 1;
     printf("houses = %d\n", calculate_houses(matrix, buffer));
     free_matrix(matrix, MATRIX_SIZE);
     return (0);
