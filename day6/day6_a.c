@@ -108,13 +108,6 @@ static int	day6(char *str, int **matrix)
 	return (lights);
 }
 
-static void init(int **matrix)
-{
-	for(int x = 0; x < matrix_size; x++)
-		for(int y = 0; y < matrix_size; y++)
-			matrix[x][y] = 0;
-}
-
 int main(int argc, char **argv)
 {
 	FILE	*file;
@@ -135,7 +128,6 @@ int main(int argc, char **argv)
 		exit(1);
 	}
 	matrix = create_matrix(matrix_size);
-	init(matrix);
 	while (fgets(buffer, MAX_LINE_LENGTH, file) != 0)
 		lights = day6(buffer, matrix);
 	printf("Total lights on = %d", lights);
