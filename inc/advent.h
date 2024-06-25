@@ -5,6 +5,7 @@
 # include <stdlib.h>
 # include <fcntl.h>
 # include <string.h>
+# include <ctype.h>
 
 # define MAX_LINE_LENGTH 2048
 # define MATRIX_SIZE 10000
