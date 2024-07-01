@@ -2,19 +2,7 @@
 
 int	matrix_size = 1000; 
 
-typedef struct s_coordinate
-{
-	int	x;
-	int	y;
-}	t_coordinate;
-
-typedef struct s_datos
-{
-	t_coordinate	start;
-	t_coordinate	end;
-}	t_data;
-
-void	extract_data(char *str, t_data *data)
+static void	extract_data(char *str, t_data *data)
 {
 	while (isdigit(*str) == 0)
 		str++;

@@ -18,4 +18,18 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
 
 void calculate_md5(const char *str, char *md5_result);
 
+// Matrix struct used in exercise 6 //
+
+typedef struct s_coordinate
+{
+	int	x;
+	int	y;
+}	t_coordinate;
+
+typedef struct s_datos
+{
+	t_coordinate	start;
+	t_coordinate	end;
+}	t_data;
+
 #endif
